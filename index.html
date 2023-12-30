@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Melonoma Skin Cancer Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div>
+            Melonoma Skin Cancer Detection
+        </div>
+        </header>
+
+    <div>
+        <h1>Upload Your Image Here</h1>
+    </div>
+    <div>
+         {% if image_url %}
+        <img class="cooseed-img" src="{{ image_url }}" alt="Uploaded Image">
+         {% endif %}
+    </div>
+<div class="details">
+     {% if prediction %}
+    <p class="prediction">{{ prediction }}</p>
+    <div class="view" >
+          <a class="view_details" href="/details/{{ prediction_id }}">View Details</a>
+    </div>
+
+     {% endif %}
+</div>
+
+     <div class="form">
+        <form method="POST" enctype="multipart/form-data">
+            <label for="fileInput">
+                Choose Image
+                <input class="choose" type="file" id="fileInput" name="file">
+              </label>
+
+            <input class="predict" type="submit" value="Predict">
+        </form>
+     </div>
+</body>
+
+</html>

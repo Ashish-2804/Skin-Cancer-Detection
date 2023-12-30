@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cancer Details</title>
+
+</head>
+<body>
+    <h1>Cancer Details</h1>
+    <p>Name: {{ details['Name'] }}</p>
+    <p>Description: {{details['Description'] }}</p>
+    <p>Symptoms: </p>
+    <ul>
+        <li>{{ details['Symptoms'][0] }}</li>
+        <li>{{ details['Symptoms'][1] }}</li>
+        <li>{{ details['Symptoms'][2] }}</li>
+        <li>{{ details['Symptoms'][3] }}</li>
+    </ul>
+    <p>Diagnosis:</p>
+     <ul>
+        <li>{{ details['Diagonosis'][0] }}</li>
+        <li>{{ details['Diagonosis'][1] }}</li>
+        <li>{{ details['Diagonosis'][2] }}</li>
+    </ul>
+    <!-- Display cancer details here -->
+</body>
+</html>
